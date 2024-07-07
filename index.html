@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html translate="no" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/models/drawable-object.class.js"></script>
+    <script src="js/models/moveable-object.class.js"></script>
+    <script src="js/models/character.class.js"></script>
+    <script src="js/models/puffer-fish.class.js"></script>
+    <script src="js/models/jelly-fish.class.js"></script>
+    <script src="js/models/status-bar.class.js"></script>
+    <script src="js/models/status-value.class.js"></script>
+    <script src="js/models/status-coins.class.js"></script>
+    <script src="js/models/status-bubbles.class.js"></script>
+    <script src="js/models/status-potions.class.js"></script>
+    <script src="js/models/world.class.js"></script>
+    <script src="js/models/background-object.class.js"></script>
+    <script src="js/models/keyboard.class.js"></script>
+    <script src="js/models/endboss.class.js"></script>
+    <script src="js/models/throwable-object.class.js"></script>
+    <script src="js/models/bubble.class.js"></script>
+    <script src="js/models/collectable-object.class.js"></script>
+    <script src="js/models/bubble-item.class.js"></script>
+    <script src="js/models/coin-item.class.js"></script>
+    <script src="js/models/potion-item.class.js"></script>
+    <script src="js/models/level.class.js"></script>
+    <script src="js/levels/level1.js"></script>
+    <script src="js/game.js"></script>
+
+    <title>Sharkie</title>
+</head>
+
+<body onload="init()">
+
+    <h1>Sharkie</h1>
+    <main>
+
+        <div id="menu">
+            <img id="btn-pause" class="btn" src="icon/pause-solid.svg" style="display: none;" onclick="pauseGame()">
+            <img class="btn btn-fullscreen" src="icon/expand-solid.svg" onclick="fullscreen()">
+            <img id="btn-sound" class="btn" src="icon/volume-high-solid.svg" onclick="toggleSound()">
+            <img class="btn" src="icon/circle-info-solid.svg" onclick="openInfo()">
+        </div>
+
+        <div class="mobile-events">
+            <div class="mobile-events-actions">
+                <img id="btn-attack-potion" class="btn" src="icon/burst-solid.svg">
+                <img id="btn-attack-bubble" class="btn" src="icon/circle-notch-solid.svg">
+            </div>
+            <div class="mobile-events-keyboard">
+                <div class="top">
+                    <img id="btn-move-up" class="btn" src="icon/circle-up-regular.svg">
+                </div>
+                <div class="middle">
+                    <img id="btn-move-left" class="btn" src="icon/circle-left-regular.svg">
+                    <img id="btn-move-right" class="btn" src="icon/circle-right-regular.svg">
+                </div>
+                <div class="bottom">
+                    <img id="btn-move-down" class="btn" src="icon/circle-down-regular.svg">
+                </div>
+            </div>
+        </div>
+
+        <div id="game-over-screen" style="display: none;">
+            <img class="game-over-text" src="img/6.Botones/Tittles/Game Over/Recurso 13.png">
+            <img class="btn btn-restart-game" src="icon/rotate-right-solid.svg" onclick="restartGame()">
+        </div>
+
+        <div id="game-win-screen" style="display: none;">
+            <img class="game-win-text" src="img/6.Botones/Tittles/You win/Recurso 20.png">
+            <img class="btn btn-restart-game" src="icon/rotate-right-solid.svg" onclick="restartGame()">
+        </div>
+
+        <div id="start-screen">
+            <img class="btn btn-start" src="img/6.Botones/Start/3.png" onclick="startGame()">
+        </div>
+
+        <div id="info" style="display: none;">
+            <img class="btn btn-close" src="icon/xmark-solid.svg" onclick="closeInfo()">
+            <div class="info-container">
+                <img class="img-arrow-keys" src="img/6.Botones/Key/arrow keys.png">
+                <div class="info-text">Move Sharkie</div>
+            </div>
+            <div class="info-container">
+                <img class="img-arrow-keys" src="img/6.Botones/Key/Space Bar key.png">
+                <div class="info-text">Shot Bubbles</div>
+            </div>
+            <div class="info-container">
+                <img class="img-arrow-keys" src="img/6.Botones/Key/D key.png">
+                <div class="info-text">Slap</div>
+            </div>
+        </div>
+
+        <div class="screen-rotate">
+            <h2>Rotate Device</h2>
+            <img class="img-rotate-phone" src="icon/mobile-screen-button-solid.svg">
+            <img class="img-rotate-arrow" src="icon/rotate-left-solid.svg">
+        </div>
+
+        <canvas id="canvas" width="720px" height="480px"></canvas>
+
+    </main>
+
+    <footer>
+        <a href="imprint.html">Imprint</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+@font-face {
+    font-family: LuckiestGuy;
+    src: url('img/5.Font/LuckiestGuy-Regular.ttf');
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('img/3. Background/Dark/2.png');
+    backdrop-filter: blur(10px);
+    font-family: LuckiestGuy;
+    color: white;
+}
+
+h1 {
+    top: 0;
+    position: absolute;
+    font-size: 48px;
+    letter-spacing: 4px;
+}
+
+main {
+    position: relative;
+}
+
+canvas {
+    background-color: black;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: block;
+}
+
+#menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 16px;
+    z-index: 998;
+}
+
+.btn {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 125ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(110%);
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.btn-page-back {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+}
+
+.btn-page-next {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+}
+
+.btn-restart-game {
+    width: 32px;
+    height: 32px;
+    border: solid 2px white;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+#start-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+}
+
+.btn-start {
+    width: 216px;
+    height: 70px;
+}
+
+.btn-start:hover {
+    content: url('img/6.Botones/Start/4.png');
+}
+
+#info {
+    width: 100%;
+    height: 100%;
+    background: rgb(65, 208, 226);
+    background: linear-gradient(169deg, rgba(65, 208, 226, 1) 0%, rgba(47, 49, 141, 1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.info-container img {
+    object-fit: contain;
+    height: 64px;
+}
+
+.info-text {
+    font-size: 24px;
+    width: 200px;
+    padding-right: 60px;
+}
+
+.img-arrow-keys {
+    width: 200px;
+    height: 120px;
+}
+
+#game-over-screen {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.game-over-text {
+    width: 400px;
+}
+
+#game-win-screen {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.game-win-text {
+    width: 400px;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.privacy {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.mobile-events {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-events .top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-events .middle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.mobile-events .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-events-keyboard {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.mobile-events-keyboard .btn {
+    width: 48px;
+    height: 48px;
+    margin: 8px;
+}
+
+.mobile-events-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-events-actions .btn {
+    width: 48px;
+    height: 48px;
+    margin: 24px;
+}
+
+.screen-rotate {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.screen-rotate img {
+    width: 48px;
+    height: 48px;
+}
+
+@keyframes animationRotateArrow {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes animationRotatePhone {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.img-rotate-arrow {
+    animation: 4s ease-out 0s 1 animationRotateArrow;
+    animation-iteration-count: infinite;
+}
+
+.img-rotate-phone {
+    animation: 4s ease-out 0s 1 animationRotatePhone;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 720px) {
+    canvas {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    canvas {
+        height: 100vh;
+    }
+
+    h1,
+    footer {
+        display: none;
+    }
+
+    #start-screen,
+    #info,
+    canvas {
+        border-radius: 0;
+    }
+
+    #btn-pause {
+        position: absolute;
+        top: 42px;
+        right: 0;
+    }
+}
+
+@media only screen and (min-height: 481px) {
+    .mobile-events {
+        display: none;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .screen-rotate {
+        display: none;
+    }
+}
